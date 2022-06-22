@@ -1,0 +1,73 @@
+Pane {
+    -fx-background-color: FFF8DC;
+}
+
+Pane.estudo {
+    -fx-background-color: #f4a460;
+    -fx-background-radius: 10px;
+}
+Pane.lateral {
+    -fx-background-color: #cd853f;
+}
+
+Pane.inseto {
+    -fx-background-color: #ffe4b5;
+    -fx-background-radius: 5px;
+}
+
+.label.topo {
+    -fx-font-size: 19px;
+    -fx-font-family: "Times new Roman", Georgia, Serif;
+    -fx-text-fill: #783c00;
+}
+
+.label#inicio {
+    -fx-border-color: #783c00;
+}
+
+.label.estudo {
+    -fx-font-size: 13.5px;
+    -fx-font-family: "Times new Roman";
+}
+
+.label#cad {
+    -fx-font-size: 18px;
+}
+
+.label.boa-vinda {
+    -fx-font-size: 44px;
+    -fx-font-family: "OCR A Std", monospace;
+}
+
+.label.user {
+    -fx-font-size: 18px;
+}
+
+.button {
+    -fx-background-color: #D2691E;
+    -fx-background-radius: 10px;
+}
+
+.text-field {
+    -fx-background-color: #D2B48C;
+    -fx-background-radius: 4px; 
+}
+
+.hyperlink {
+    -fx-text-fill: #FFDEAD;
+}
+
+.hyperlink#login {
+    -fx-text-fill: #D2691E;
+}
+
+.separator {
+    -fx-background-color: #FFDEAD;
+}
+
+.radio-button {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Times new Roman";
+    -fx-text-fill: #783c00;
+}

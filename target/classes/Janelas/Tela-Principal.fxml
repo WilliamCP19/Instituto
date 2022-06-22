@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="394.0" prefWidth="600.0" style="-fx-background-image: ffd700;" stylesheets="@../Imagens/Estilos.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controladores.TelaControlador">
+   <children>
+      <Separator layoutX="142.0" orientation="VERTICAL" prefHeight="394.0" prefWidth="12.0" />
+      <Label fx:id="lbNomeUsuario" layoutX="296.0" layoutY="106.0" styleClass="user" text="especialista_usuario" />
+      <Pane layoutX="149.0" layoutY="178.0" prefHeight="211.0" prefWidth="444.0" styleClass="estudo">
+         <children>
+            <Separator layoutY="24.0" prefHeight="4.0" prefWidth="444.0" />
+            <Label layoutX="14.0" layoutY="4.0" style="-fx-font-weight: bold;" styleClass="estudo" text="Ultimos Insetos Estudados" />
+            <Pane layoutX="3.0" layoutY="30.0" prefHeight="78.0" prefWidth="437.0" styleClass="inseto">
+               <children>
+                  <Label layoutX="6.0" layoutY="7.0" styleClass="estudo" text="Nome Científico: " />
+                  <Label layoutX="6.0" layoutY="31.0" styleClass="estudo" text="Nome Popular: " />
+                  <Label layoutX="6.0" layoutY="56.0" styleClass="estudo" text="ID: " />
+                  <Label fx:id="lbNomeCientifico" layoutX="117.0" layoutY="6.0" text="inseto_nomeCientifico" />
+                  <Label fx:id="lbNomePopular" layoutX="117.0" layoutY="30.0" text="inseto_nomePopular" />
+                  <Label fx:id="cxID" layoutX="117.0" layoutY="56.0" text="inseto_id" />
+               </children></Pane>
+            <Pane layoutX="4.0" layoutY="126.0" prefHeight="78.0" prefWidth="437.0" styleClass="inseto">
+               <children>
+                  <Label layoutX="6.0" layoutY="7.0" styleClass="estudo" text="Nome Científico: " />
+                  <Label layoutX="6.0" layoutY="31.0" styleClass="estudo" text="Nome Popular: " />
+                  <Label layoutX="6.0" layoutY="56.0" styleClass="estudo" text="ID: " />
+                  <Label layoutX="117.0" layoutY="6.0" text="inseto_nomeCientifico" />
+                  <Label layoutX="117.0" layoutY="30.0" text="inseto_nomePopular" />
+                  <Label layoutX="117.0" layoutY="56.0" text="inseto_id" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane layoutX="1.0" prefHeight="394.0" prefWidth="142.0" styleClass="lateral">
+         <children>
+            <Label layoutY="79.0" prefHeight="34.0" prefWidth="142.0" styleClass="topo" stylesheets="@../Imagens/Estilos.css" text="Insituto do Inseto" />
+            <Hyperlink fx:id="lkExcluir" layoutX="14.0" layoutY="241.0" onAction="#excInseto" text="Excluir Inseto" />
+            <Hyperlink fx:id="lkSair" layoutX="48.0" layoutY="362.0" onAction="#desloga" text="Logout" />
+            <Hyperlink fx:id="lkConsultar" layoutX="15.0" layoutY="160.0" onAction="#conInseto" text="Consultar Inseto" />
+            <Hyperlink fx:id="lkCadastrar" layoutX="15.0" layoutY="122.0" onAction="#cadInseto" text="Cadastrar Inseto" />
+            <Hyperlink fx:id="lkEditar" layoutX="16.0" layoutY="200.0" onAction="#ediInseto" text="Editar Inseto" />
+            <ImageView fitHeight="65.0" fitWidth="114.0" layoutX="16.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Imagens/Instituto.png" />
+               </image>
+            </ImageView>
+            <Separator layoutY="158.0" prefHeight="4.0" prefWidth="142.0" />
+            <Separator layoutY="120.0" prefHeight="4.0" prefWidth="142.0" />
+            <Separator layoutX="-5.0" layoutY="198.0" prefHeight="4.0" prefWidth="152.0" />
+            <Separator layoutY="239.0" prefHeight="4.0" prefWidth="142.0" />
+            <Separator layoutY="278.0" prefHeight="4.0" prefWidth="142.0" />
+         </children>
+      </Pane>
+      <Separator layoutX="148.0" layoutY="25.0" prefHeight="4.0" prefWidth="452.0" />
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="466.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Imagens/user.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="493.0" layoutY="6.0" text="Nome de Usuário" />
+      <Label layoutX="154.0" layoutY="47.0" styleClass="boa-vinda" text="BEM VINDO," />
+      <Label id="inicio" layoutX="154.0" layoutY="3.0" styleClass="topo" text="Tela Principal" />
+   </children>
+</Pane>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="323.0" prefWidth="305.0" stylesheets="@../Imagens/Estilos.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controladores.CadEspecialistaControlador">
+   <children>
+      <TextField fx:id="cxCadNome" layoutX="8.0" layoutY="81.0" prefHeight="25.0" prefWidth="289.0" />
+      <Label layoutX="132.0" layoutY="118.0" text="Usuario" />
+      <Label layoutX="136.0" layoutY="171.0" text="Senha" />
+      <Label layoutX="93.0" layoutY="14.0" styleClass="topo" text="Cadastramento " />
+      <Label layoutX="135.0" layoutY="230.0" text="E-mail" />
+      <PasswordField fx:id="cxCadSenha" layoutX="78.0" layoutY="188.0" />
+      <Button fx:id="btRealizaCad" layoutX="99.0" layoutY="284.0" mnemonicParsing="false" text="Realizar Cadastro" />
+      <Label layoutX="136.0" layoutY="64.0" text="Nome" />
+      <TextField fx:id="cxCadUsuario" layoutX="78.0" layoutY="135.0" prefHeight="25.0" prefWidth="149.0" />
+      <TextField fx:id="cxCadEmail" layoutX="8.0" layoutY="247.0" prefHeight="25.0" prefWidth="289.0" />
+   </children>
+</Pane>
