@@ -61,6 +61,13 @@ Pane.inseto {
     -fx-text-fill: #D2691E;
 }
 
+.hyperlink#menu {
+    -fx-font-size: 20px;
+    -fx-border-color: #FFDEAD;
+    -fx-border-width: 5px;
+    -fx-border-radius: 15px
+}
+
 .separator {
     -fx-background-color: #FFDEAD;
 }

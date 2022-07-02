@@ -44,14 +44,19 @@ public class CadInsetoControlador {
     }
 
     @FXML
-    void excInseto() throws Exception {
+    void excInseto () throws Exception {
         TelaControlador Excluir = new TelaControlador();
         Excluir.excInseto();
     }
 
     @FXML
+    void menu () throws Exception {
+        Gerencia.a.fechaJanela(); TelaControlador.abreMenu();
+    }
+
+    @FXML
     void desloga() throws Exception {
-        TelaControlador sair = new TelaControlador();
-        sair.desloga();
+        TelaControlador Sair = new TelaControlador();
+        Sair.desloga();
     }
 }

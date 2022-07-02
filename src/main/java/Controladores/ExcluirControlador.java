@@ -48,6 +48,11 @@ public class ExcluirControlador {
     }
 */
     @FXML
+    void menu () throws Exception {
+        Gerencia.a.fechaJanela(); TelaControlador.abreMenu();
+    }
+
+    @FXML
     void desloga() throws Exception {
         TelaControlador sair = new TelaControlador();
         sair.desloga();

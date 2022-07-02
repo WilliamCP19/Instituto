@@ -29,6 +29,7 @@
             <Separator layoutX="-5.0" layoutY="198.0" prefHeight="4.0" prefWidth="152.0" />
             <Separator layoutY="239.0" prefHeight="4.0" prefWidth="142.0" />
             <Separator layoutY="278.0" prefHeight="4.0" prefWidth="142.0" />
+            <Hyperlink id="menu" fx:id="lkExcluir1" layoutX="2.0" layoutY="306.0" onAction="#menu" text="Tela Principal" />
          </children>
       </Pane>
       <Separator layoutX="142.0" layoutY="23.0" prefHeight="4.0" prefWidth="452.0" />

@@ -18,51 +18,49 @@ public class TelaControlador {
     @FXML protected Hyperlink lkEditar;
     @FXML protected Hyperlink lkExcluir;
     @FXML protected Hyperlink lkSair;
-    int cont = 0;
+    protected static Stage dashboard;
+
     @FXML
     void cadInseto () throws Exception {
         Parent cadastrar = FXMLLoader.load(getClass().getResource("../Janelas/Cadastrar-Inseto.fxml"));
-        Scene telaCadIns = new Scene(cadastrar);
-        Stage cadastrarInseto = Gerencia.setScene(telaCadIns);
-        Gerencia.chamaStart(cadastrarInseto); Gerencia.alteraEstagioPrimario(cadastrarInseto); cont++;
+        Scene telaCadIns = new Scene(cadastrar); Gerencia.a.fechaJanela();
+        Stage cadastrarInseto = Gerencia.a.setScene(telaCadIns); evitaRepetir(cadastrarInseto);
     }
 
     @FXML
     void conInseto () throws Exception {
         Parent consultar = FXMLLoader.load (getClass().getResource("../Janelas/Consultar-Inseto.fxml"));
-        Scene telaConsultar = new Scene(consultar);
-        Stage consultarInseto = Gerencia.setScene(telaConsultar);
-        Gerencia.chamaStart(consultarInseto); Gerencia.alteraEstagioPrimario(consultarInseto); cont++;
+        Scene telaConsultar = new Scene(consultar); Gerencia.a.fechaJanela();
+        Stage consultarInseto = Gerencia.a.setScene(telaConsultar); evitaRepetir(consultarInseto);
     }
 
     @FXML
     void ediInseto () throws Exception {
         Parent editar = FXMLLoader.load (getClass().getResource("../Janelas/Editar-Inseto.fxml"));
-        Scene telaEditar = new Scene(editar);
-        Stage editarInseto = Gerencia.setScene(telaEditar);
-        Gerencia.chamaStart(editarInseto); Gerencia.alteraEstagioPrimario(editarInseto); cont++;
+        Scene telaEditar = new Scene(editar); Gerencia.a.fechaJanela();
+        Stage editarInseto = Gerencia.a.setScene(telaEditar); evitaRepetir(editarInseto);
     }
 
     @FXML
     void excInseto () throws Exception {
         Parent excluir = FXMLLoader.load (getClass().getResource("../Janelas/Excluir-Inseto.fxml"));
-        Scene telaExcluir = new Scene(excluir);
-        Stage excluirInseto = Gerencia.setScene(telaExcluir);
-        Gerencia.chamaStart(excluirInseto); Gerencia.alteraEstagioPrimario(excluirInseto); cont++;
+        Scene telaExcluir = new Scene(excluir); Gerencia.a.fechaJanela();
+        Stage excluirInseto = Gerencia.a.setScene(telaExcluir); evitaRepetir(excluirInseto);
     }
 
-
-    public void chamaLogin () throws Exception {
-        Gerencia.dashboard.close();
-        Gerencia.dashboard = null;
-        Gerencia.chamaStart(new Stage());
-    }
     @FXML
-    void desloga() throws Exception {
-        Gerencia.estagioPrimario.close();
-        Gerencia.estagioPrimario = null; cont--;
-        if (cont == 0) {
-            chamaLogin();
-        }
+    static void abreMenu () throws Exception {
+        Gerencia.a.chamaStart(dashboard); Gerencia.a.alteraJanelaAtual(dashboard);
+    }
+
+    protected static void evitaRepetir (Stage funcao) throws Exception {
+        Gerencia.a.chamaStart(funcao); 
+        Gerencia.a.alteraJanelaAtual(funcao);
+    }
+
+    @FXML
+    void desloga () throws Exception {
+        Gerencia.a.fechaJanela(); Gerencia.janelaAtual = null;
+        Gerencia.a.chamaStart(new Stage());
     }
 }

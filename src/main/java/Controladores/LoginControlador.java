@@ -24,7 +24,7 @@ public class LoginControlador {
     @FXML
     protected static Scene realizarLogin () throws Exception {
         Parent login = FXMLLoader.load(LoginControlador.class.getResource("../Janelas/Login.fxml"));
-        Scene telaLogin = new Scene (login);
+        Scene telaLogin = new Scene (login);   
         return telaLogin;
     }
 
@@ -32,11 +32,9 @@ public class LoginControlador {
     void autenticacao () throws Exception {
         if (cxUsuario.getText().equals("") && cxSenha.getText().equals("")) {
             Parent entrar = FXMLLoader.load(getClass().getResource("../Janelas/Tela-Principal.fxml"));
-            Scene telaPrincipal = new Scene (entrar);
-            Gerencia.estagioPrimario.close();
-            Stage acessSistema = Gerencia.setScene(telaPrincipal);
-            Gerencia.chamaStart(acessSistema); 
-            Gerencia.alteraEstagioPrimario(acessSistema); Gerencia.dashboard = Gerencia.estagioPrimario;
+            Scene telaPrincipal = new Scene (entrar); Gerencia.a.fechaJanela();
+            Stage acessSistema = Gerencia.a.setScene(telaPrincipal);
+            TelaControlador.evitaRepetir(acessSistema); TelaControlador.dashboard = Gerencia.janelaAtual;
         } else {
             Alert erroAutenticacao = new Alert (AlertType.ERROR);
             erroAutenticacao.setTitle("ERRO");
@@ -50,13 +48,13 @@ public class LoginControlador {
     void redefinirSenha () throws Exception {
         Parent redefinir = FXMLLoader.load(getClass().getResource("../Janelas/Redefinir-Senha.fxml"));
         Scene telaRedefinir = new Scene (redefinir);
-        Gerencia.chamaStart(Gerencia.setScene(telaRedefinir));
+        Gerencia.a.chamaStart(Gerencia.a.setScene(telaRedefinir));
     }
 
     @FXML
     void cadEspecialista () throws Exception {
         Parent cadEsp = FXMLLoader.load(getClass().getResource("../Janelas/Cadastrar-especialista.fxml"));
         Scene telaCadEsp = new Scene (cadEsp);
-        Gerencia.chamaStart(Gerencia.setScene(telaCadEsp));
-    }
+        Gerencia.a.chamaStart(Gerencia.a.setScene(telaCadEsp));
+    } 
 }
